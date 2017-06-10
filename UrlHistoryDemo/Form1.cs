@@ -345,12 +345,16 @@ namespace UrlHistoryDemo
 		{
             string v = " ";
 
-			list.Clear();
-			list.TrimToSize();
-			
+		//	list.Clear();
+			//list.TrimToSize();
+
+            int i = 0;
 			while(enumerator.MoveNext())
 			{
-				list.Add(enumerator.Current);
+                i++;
+                if (i == 100)
+                    break;
+				//list.Add(enumerator.Current);
                 v += (Spaces(enumerator.Current.LastVisited.ToString() ,30)+ "   :   " + enumerator.Current.URL+"\r\n");
 
 			}
@@ -363,10 +367,13 @@ namespace UrlHistoryDemo
 
             try
             {
-                string old = ""; try { old = System.IO.File.ReadAllText("History_urls.rog"); }
-                catch { }
-                old = old.Trim(); 
-                old = v+"\r\n\r\n___________________________________________\r\n\r\n" + old;
+                string old = ""; 
+                try { old = System.IO.File.ReadAllText("History_urls.rog"); }                catch { }
+                old = old.Trim();
+                if (old.Length < 50)
+                    old = v;
+                else
+                    old = v + "\r\n\r\n___________________________________________\r\n\r\n" + old;
                 System.IO.File.WriteAllText("History_urls.rog", v.Trim());
             }
             catch { }
