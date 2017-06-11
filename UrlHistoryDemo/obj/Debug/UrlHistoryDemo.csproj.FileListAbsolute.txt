@@ -7,3 +7,12 @@ C:\Users\Exception\Downloads\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlH
 C:\Users\Exception\Downloads\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.csproj.GenerateResource.Cache
 C:\Users\Exception\Downloads\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.exe
 C:\Users\Exception\Downloads\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.pdb
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.exe
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.pdb
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\bin\Debug\UrlHistoryDemo.exe
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\bin\Debug\UrlHistoryDemo.pdb
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\bin\Debug\UrlHistoryLibrary.dll
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\bin\Debug\UrlHistoryLibrary.pdb
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.csprojResolveAssemblyReference.cache
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.Form1.resources
+C:\Users\Exception\Documents\Visual Studio 2012\Projects\ponta_demo\ponta_demo\UrlHistoryDemo\obj\Debug\UrlHistoryDemo.csproj.GenerateResource.Cache

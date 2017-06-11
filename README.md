@@ -1,3 +1,5 @@
 Pronto Project , Eddited For Roglaza Application
 
-Gets History files and exports the output to @@current_directory/History_urls.rog
+ Reads History files and exports output to Fixed_locaton
+
+Fixed_locaton=path found at output_path + \\+History_files.rog

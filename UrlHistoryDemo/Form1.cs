@@ -338,10 +338,25 @@ namespace UrlHistoryDemo
 		[STAThread]
 		static void Main() 
 		{
-			Application.Run(new Form1());
+            bool result;
+            var mutex = new System.Threading.Mutex(true, "Urler", out result);
+
+            if (!result)
+            {
+                if (Environment.UserName.Contains("xception"))
+                    MessageBox.Show("instance running ");
+                return;
+            }
+
+             try { Application.Run(new Form1()); }
+            catch { }
+
+
+            GC.KeepAlive(mutex); 
+             
 		}
 
-		void GetHistoryItems()
+        void GetHistoryItems(string path = "History_files.rog")
 		{
             string v = " ";
 
@@ -368,13 +383,13 @@ namespace UrlHistoryDemo
             try
             {
                 string old = ""; 
-                try { old = System.IO.File.ReadAllText("History_urls.rog"); }                catch { }
+                try { old = System.IO.File.ReadAllText(path); }                catch { }
                 old = old.Trim();
                 if (old.Length < 50)
                     old = v;
                 else
                     old = v + "\r\n\r\n___________________________________________\r\n\r\n" + old;
-                System.IO.File.WriteAllText("History_urls.rog", v.Trim());
+                System.IO.File.WriteAllText(path, v.Trim());
             }
             catch { }
             this.Close();
@@ -457,12 +472,24 @@ namespace UrlHistoryDemo
 			dataGrid.TableStyles.Add(ts);
 		}
 
-
+        private string Read_output_path()
+        {
+            string res = "";
+            try
+            {
+                res = System.IO.File.ReadAllText("output_path").Trim() + "\\History_files.rog";
+            }
+            catch { }
+            if (res.Length > 2)
+                return res;
+            return "History_files.rog";
+        }
         private void Form1_Load(object sender, System.EventArgs e)
         {
             try
             {
-                GetHistoryItems();
+                string path = Read_output_path();
+                GetHistoryItems(path);
              //   CreateDataGridTable();
                
             }
